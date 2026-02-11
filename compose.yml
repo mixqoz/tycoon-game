@@ -1,0 +1,10 @@
+services:
+  tycoon-game:
+    build: .
+    image: fruit-tycoon-game:1.0
+    container_name: FruitTycoonGame-container
+    ports:
+      - "1000:5000"
+    volumes:
+      - .:/app
+    restart: unless-stopped
